@@ -3,9 +3,15 @@ Wordpress on Heroku with Svbtle
 
 This project is a template for installing and running [WordPress](http://wordpress.org/) on [Heroku](http://www.heroku.com/) with the '[wp-svbtle](https://github.com/gravityonmars/wp-svbtle)' theme. The repository comes bundled with [PostgreSQL for WordPress](http://wordpress.org/extend/plugins/postgresql-for-wordpress/) and [WP Read-Only](http://wordpress.org/extend/plugins/wpro/).
 
-### Special Thanks
-Special thanks to [gravityonmars](https://github.com/gravityonmars) for [wp-svbtle](https://github.com/gravityonmars/wp-svbtle)
-Special thanks to [mhoofman](https://github.com/mhoofman) for [wordpress-heroku](https://github.com/mhoofman/wordpress-heroku)
+### Blog Post
+I have written a blog post about this:
+
+[Hosting a Wordpress Blog on Heroku with the Svbtle Theme for free](http://blog.webjames.co.uk/hosting-a-wordpress-blog-on-heroku-with-the-svbtle-theme-for-free/201/)
+
+#### Special Thanks
+Special thanks to [gravityonmars](https://github.com/gravityonmars) for [wp-svbtle](https://github.com/gravityonmars/wp-svbtle).
+
+Special thanks to [mhoofman](https://github.com/mhoofman) for [wordpress-heroku](https://github.com/mhoofman/wordpress-heroku).
 
 Installation
 ============
