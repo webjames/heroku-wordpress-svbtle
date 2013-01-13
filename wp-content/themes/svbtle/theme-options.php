@@ -76,6 +76,18 @@ function theme_options_do_page() {
 					</tr>
 
 					<tr>
+						<th><?php _e( 'Show Atribution Link', 'wordpress-svbtle' ); ?></th>
+						<td>
+							<input type="checkbox" name="svbtle_options[attribution-link]" value="1"
+
+							<?php if ($options['attribution-link'] == 1): ?>
+								checked="checked"
+							<?php endif ?>
+							>
+						</td>
+					</tr>
+
+					<tr>
 						<th><?php _e( 'Blog color', 'wordpress-svbtle' ); ?></th>
 						<td>
 							<input id="color1" class="regular-text" type="text" name="svbtle_options[color]" value="<?php echo $color; ?>" />
