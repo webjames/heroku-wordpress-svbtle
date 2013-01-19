@@ -7,19 +7,19 @@ This project is a template for installing and running [WordPress](http://wordpre
 
 I will detail any updates here.
 
-### 2013/01/19 - Enabled email using SendGrid add-on
+#### 2013/01/19 - Enabled email using SendGrid add-on
 
 I have written a blog post about how to set up email using SendGrid, changes have been merged into this repository:
 
-[Enabling email on Wordpress on Heroku using SendGrid](http://blog.webjames.co.uk/enabling-email-on-wordpress-on-heroku-using-sendgrid/250/)
+[Enabling email on Wordpress on Heroku using SendGrid](http://blog.webjames.co.uk/enabling-email-on-wordpress-on-heroku-using-sendgrid/266/)
 
-### 2013/01/13 - Blog post
+#### 2013/01/13 - Blog post
 
 I have written a blog post about this:
 
 [Hosting a Wordpress Blog on Heroku with the Svbtle Theme for free](http://blog.webjames.co.uk/hosting-a-wordpress-blog-on-heroku-with-the-svbtle-theme-for-free/201/)
 
-#### Special Thanks
+### Special Thanks
 Special thanks to [gravityonmars](https://github.com/gravityonmars) for [wp-svbtle](https://github.com/gravityonmars/wp-svbtle).
 
 Special thanks to [mhoofman](https://github.com/mhoofman) for [wordpress-heroku](https://github.com/mhoofman/wordpress-heroku).
@@ -130,6 +130,8 @@ WordPress needs to update the database. After push, navigate to:
 
 WordPress will prompt for updating the database. After that you'll be good
 to go.
+
+If you get 404 errors on viewing single posts, you will need to re-save your 'Permalink Settings' under Settings -> Permalinks. Just hit save, no need to change anything.
 
 Custom Domains
 ==============
