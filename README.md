@@ -3,7 +3,18 @@ Wordpress on Heroku with Svbtle
 
 This project is a template for installing and running [WordPress](http://wordpress.org/) on [Heroku](http://www.heroku.com/) with the '[wp-svbtle](https://github.com/gravityonmars/wp-svbtle)' theme. The repository comes bundled with [PostgreSQL for WordPress](http://wordpress.org/extend/plugins/postgresql-for-wordpress/) and [WP Read-Only](http://wordpress.org/extend/plugins/wpro/).
 
-### Blog Post
+### Updates:
+
+I will detail any updates here.
+
+### 2013/01/19 - Enabled email using SendGrid add-on
+
+I have written a blog post about how to set up email using SendGrid, changes have been merged into this repository:
+
+[Enabling email on Wordpress on Heroku using SendGrid](http://blog.webjames.co.uk/enabling-email-on-wordpress-on-heroku-using-sendgrid/250/)
+
+### 2013/01/13 - Blog post
+
 I have written a blog post about this:
 
 [Hosting a Wordpress Blog on Heroku with the Svbtle Theme for free](http://blog.webjames.co.uk/hosting-a-wordpress-blog-on-heroku-with-the-svbtle-theme-for-free/201/)
@@ -40,6 +51,10 @@ Promote the database (replace COLOR with the color name from the above output)
 
 	$ heroku pg:promote HEROKU_POSTGRESQL_COLOR
 	> Promoting HEROKU_POSTGRESQL_COLOR to DATABASE_URL... done
+
+Add SendGrid to your app - optional, to enable email.
+
+    $ heroku addons:add sendgrid:starter
 
 Create a new branch for any configuration/setup changes needed
 
