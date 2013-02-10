@@ -7,7 +7,9 @@ This project is a template for installing and running [WordPress](http://wordpre
 
 I will detail any updates here.
 
-#### 2013/02/10 - Updated to WordPress 3.5.1 as well as updated to the latest wp-svbtle. I have forked gravityonmars' repo here: [webjames/wp-svbtle](https://github.com/webjames/wp-svbtle) to track the changes i have made. Blog post here: [heroku-wordpress-svbtle Updated to WordPress 3.5.1](http://blog.webjames.co.uk/heroku-wordpress-svbtle-updated-to-wordpress-3-5-1/286/)
+#### 2013/02/10 - Updated to WordPress 3.5.1
+
+Updated to WordPress 3.5.1 as well as updated to the latest wp-svbtle. I have forked gravityonmars' repo here: [webjames/wp-svbtle](https://github.com/webjames/wp-svbtle) to track the changes i have made. Blog post here: [heroku-wordpress-svbtle Updated to WordPress 3.5.1](http://blog.webjames.co.uk/heroku-wordpress-svbtle-updated-to-wordpress-3-5-1/286/)
 
 #### 2013/01/19 - Enabled email using SendGrid add-on
 
