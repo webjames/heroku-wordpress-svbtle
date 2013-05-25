@@ -163,6 +163,62 @@ The last step is updating your WordPress installation to recognize the new domai
 If you find yourself running into problems, there is a guide posted in the Heroku Docs which can be found [here](https://devcenter.heroku.com/articles/custom-domains).
 
 
+Local Development
+=================
+
+Note: this has only been tested on a Mac, but it should work on any environment.
+
+First, make sure your Apache is running (you should see something when you hit [http://localhost](http://localhost).
+You should also make sure that PHP5 module is enabled in ```/private/etc/apache2/httpd.conf```. Uncomment this line in the config
+if it is commented out:
+
+    LoadModule php5_module libexec/apache2/libphp5.so
+
+You may optionally want to change some settings in your php.ini file (located at ```/private/etc/php.ini.default``` - copy/rename this file to ```php.ini```), but this is not
+necessary.
+
+Create a new virtual host file for your blog in ```/private/etc/apache2/other```. Here is a sample vhost that you can start with.
+
+    <VirtualHost *:80>
+        ServerName mycool.blog
+        ServerAlias *.mycool.blog
+        DocumentRoot "/Users/username/Sites/mycool-blog"
+
+        SetEnv DATABASE_URL "postgres://user:pw@127.0.0.1/mycool-blog"
+
+        <Directory "/Users/username/Sites/mycool-blog">
+            Options Indexes FollowSymLinks Includes ExecCGI
+            Order allow,deny
+            Allow from all
+        </Directory>
+    </VirtualHost>
+
+Change the *ServerName*, *ServerAlias*, *DocumentRoot* and *username* values to reflect your own local environment. We'll get
+to the *SetEnv DATABASE_URL* in a minute.
+
+In order to use the ```mycool.blog``` domain locally, you will need to add it to your ```/etc/hosts``` file. So just add an
+entry to it like so (you will need to sudo to modify this file.)
+
+    127.0.0.1       mycool.blog
+    
+Now that we have Apache running locally, enabled the PHP5 module, created a vhost for our blog and added a hosts entry for it,
+we can now restart Apache.
+
+    $ sudo apachectl restart
+
+If you look in the ```wp-config.php``` file, you will notice that the ```DATABASE_URL``` environment variable is first read from the
+```$_ENV``` variable (which is defined and used by Heroku), and if that does not exist, it will try to read it using ```getenv()```, which
+we have defined in our Apache vhost setting above. The next step involves setting up Postgres locally.
+
+The simplest way to get Postgres up and running locally is to use this app: [postgresapp.com](http://postgresapp.com)
+
+Optionally, you can also download the PgAdmin app to help you manage your database. [PgAdmin](http://www.pgadmin.org/download/macosx.php)
+
+Once you have created your database locally, you can then set the ```DATABASE_URL``` value and you should be all set to go. Setting
+up and database and roles is outside the scope of this README, however there is great documentation on the postgresapp and pgadmin sites
+to help you get that sorted out.
+
+
 Licenses
 ========
 
